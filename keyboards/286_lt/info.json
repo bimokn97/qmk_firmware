@@ -1,12 +1,18 @@
 {
-    "keyboard_name": "80-286_lt",
-    "manufacturer": "sunny, yesterday my life was filled with rain",
+    "keyboard_name": "GPC-4013B",
+    "manufacturer": "GPC",
     "maintainer": "bimokn97",
     "url": "",
 
     "bootloader": "stm32-dfu",
     "processor": "STM32F401",
     "board": "BLACKPILL_STM32_F401",
+
+    "usb": {
+        "vid": "0xA286",
+        "pid": "0xCEEB",
+        "device_version": "1.0.0"
+    }
 
     "features": {
         "audio"     : false,

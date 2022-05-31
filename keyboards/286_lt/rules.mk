@@ -1,7 +1,7 @@
 # This file intentionally left blank
 
 QUANTUM_LIB_SRC += spi_master.c
-LIB_SRC += drivers/gpio/sn74hc595.c
+LIB_SRC += drivers/gpio/sn74x595.c
 
 #EEPROM_DRIVER = spi
 

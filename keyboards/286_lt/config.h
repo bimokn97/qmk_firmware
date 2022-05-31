@@ -1,30 +1,22 @@
- /*
- Copyright 2022
-
- This program is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 2 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License
- along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/* Copyright (C) 2022
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
 #pragma once
 
 #include "config_common.h"
-
-#define VENDOR_ID       0xA286
-#define PRODUCT_ID      0xCEEB
-#define DEVICE_VER      0x0001
-
-#define MANUFACTURER    Sunny
-#define PRODUCT         80-286_lt
 
 /* key matrix size */
 // Rows are doubled-up
@@ -45,33 +37,21 @@
 #define LED_NUM_LOCK_PIN B10
 #define LED_CAPS_LOCK_PIN B2
 
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-//#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-//#define LOCKING_RESYNC_ENABLE
-
 #define SPI_DRIVER SPID1
 #define SPI_SCK_PIN A5
 #define SPI_MOSI_PIN A6
 #define SPI_MISO_PIN  A7
 
-#define SN74HC595_SPI_SLAVE_SELECT_PIN A3
-#define SN74HC595_LENGTH 2
-#define SN74HC595_SPI_CLOCK_DIVISOR 1
+#define SN74X595_SPI_SLAVE_SELECT_PIN A3
+#define SN74X595_LENGTH 2
+#define SN74X595_SPI_CLOCK_DIVISOR 4
 
 #define EEPROM_SPI
 #define EXTERNAL_EEPROM_SPI_SLAVE_SELECT_PIN A4
-#define EXTERNAL_EEPROM_SPI_CLOCK_DIVISOR 1
+#define EXTERNAL_EEPROM_SPI_CLOCK_DIVISOR 16
 #define EXTERNAL_EEPROM_BYTE_COUNT 1028
 #define EXTERNAL_EEPROM_PAGE_SIZE 256
 #define EXTERNAL_EEPROM_ADDRESS_SIZE 1
-
-#define OLED_USE_SPI 4
-#define OLED_SPI_SLAVE_SELECT_PIN A4
-#define OLED_SPI_RESET_PIN C14
-#define OLED_SPI_DC_PIN C15
-#define OLED_DISPLAY_WIDTH 128
-#define OLED_DISPLAY_HEIGHT 64
 
 
 /*
