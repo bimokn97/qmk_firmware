@@ -33,6 +33,9 @@
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
 
+/* disable it if your keyboard doesn't work on boot */
+#define FORCE_NKRO
+
 /* indicator leds */
 #define LED_NUM_LOCK_PIN B10
 #define LED_CAPS_LOCK_PIN B2
@@ -52,7 +55,6 @@
 #define EXTERNAL_EEPROM_BYTE_COUNT 1028
 #define EXTERNAL_EEPROM_PAGE_SIZE 256
 #define EXTERNAL_EEPROM_ADDRESS_SIZE 1
-
 
 /*
  * Feature disable options

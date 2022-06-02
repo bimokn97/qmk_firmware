@@ -19,6 +19,7 @@
 #include "debug.h"
 #include "gpio.h"
 #include "drivers/gpio/sn74x595.h"
+#include "drivers/oled/oled_driver.h"
 
 static const pin_t row_pins[MATRIX_ROWS] = MATRIX_ROW_PINS;
 
@@ -33,11 +34,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 void keyboard_post_init_user(void) {
     // Customise these values to desired behaviour
-    // debug_enable = true;
-    // debug_matrix = true;
+     debug_enable = false;
+     debug_matrix = false;
     // debug_keyboard=true;
     // debug_mouse=true;
-
     setPinOutput(C13);
     writePinLow(C13);
 }
