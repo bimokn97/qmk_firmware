@@ -17,11 +17,10 @@
 #include QMK_KEYBOARD_H
 
 #define XX KC_NO
+#define __ KC_TRNS
 enum layer_names {
     _BASE,
     _NUM,
-    _2,
-    _3
 
 };
 
@@ -75,23 +74,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,    XX,     XX,     XX,     XX,     XX,     XX,     KC_KP_0, XX, KC_KP_DOT, KC_KP_SLASH, KC_RSFT,           KC_UP,           KC_END,
         KC_LCTL, KC_LALT, KC_DEL, KC_INSERT,                 KC_SPC,                          KC_RALT, KC_RCTL, KC_LEFT,    KC_DOWN,         KC_RGHT
     ),
-
-    [_2] = LAYOUT_tkl_iso(
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                 KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS
+    [2] = LAYOUT_tkl_iso(
+        __,  __,  __,  __,  __,  __,  __,  __,  __,  __,  __, __, __, __, __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __,  __, __,     __,         __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __, __,         __,          __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __, __,                           __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __,           __,           __,
+        __, __, __, __,                 __,                          __, __, __,    __,         __
     ),
-    [_3] = LAYOUT_tkl_iso(
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS,
-        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                 KC_TRNS,                            KC_TRNS, KC_TRNS, KC_TRNS,          KC_TRNS, KC_TRNS
-    ),
+    [3] = LAYOUT_tkl_iso(
+        __,  __,  __,  __,  __,  __,  __,  __,  __,  __,  __, __, __, __, __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __,  __, __,     __,         __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __, __,         __,          __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __, __,                           __,
+        __,    __,     __,     __,     __,     __,     __,     __, __, __, __, __,           __,           __,
+        __, __, __, __,                 __,                          __, __, __,    __,         __
+    )
 };
 
 bool led_update_user(led_t led_state) {

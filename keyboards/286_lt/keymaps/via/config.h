@@ -17,7 +17,8 @@
 #pragma once
 
 // place overrides here
-// #define TAPPING_TERM 200
-// #define PERMISSIVE_HOLD
+//#define DYNAMIC_MACRO_SIZE 512
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
 // #define ENCODER_RESOLUTION 2
 
